@@ -1,0 +1,229 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 20% 70% 10%;
+    
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    transition: all 0.5s;
+}
+footer{
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    transition: all 0.5s;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer{
+    width: 70%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    transition: all 0.5s;
+    column-gap: 2rem;
+
+}
+.settBar{
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+    align-items: center;
+}
+
+.col{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#color{
+    height: 4rem;
+    transition: all 0.2s;
+}
+#color:active{
+    transform: scale(1.2);
+    transition: all 0.2s;
+    z-index: 2;
+}
+
+#colorBtn{
+    margin-left: 1rem;
+}
+
+span{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    height: 70%;
+    border-radius: 8px;
+    font-size: 2rem;
+    transition: all 0.2s;
+}
+.btn:active{
+    transform: scale(1.2);
+    transition: all 0.2s;
+    z-index: 2;
+}
+
+.rangeLabel{
+    width: 100%;
+    height: 6.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+}
+#rangeBtn{
+    margin-left: 1rem;
+}
+
+
+
+/* When you want to change input: type: color */
+input[type="color"]{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding: 0;
+    width: 7rem;
+    background: none;
+    border: none;
+    height: 4rem;
+    transition: all 0.7;
+}
+input:focus{
+  border-radius: 0;
+  outline: none;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch{
+  border: none;
+  border-radius: 8px;
+  transition: all 0.7s;
+}
+input[type="color"]:hover{
+    width: 4rem;
+    height: 4rem;
+    transition: all 0.7s;
+}
+::-webkit-color-swatch:hover{
+    border-radius: 50%;
+    transition: all 0.7s;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner{
+  border: 0;
+}
+
+::-moz-focus-inner{
+  padding: 0;
+}
+
+
+/* Grid Div */
+
+.gridContainer{
+    box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.75);
+    width: 55rem;
+    height: 55rem;
+    margin: 0 auto;
+    border: none;
+    display: grid;
+    padding: 0;
+}
+#gridBoxes{
+    user-select: none;
+}
+
+
+/* Media Querys */
+@media (max-width: 1300px ) {
+    .mainContainer{
+        width: 90%;
+        transition: all 0.5s;
+    }
+}
+@media (max-width: 990px ) {
+    body{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+    }
+    .mainContainer{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+    }
+    .gridContainer{
+        margin-bottom: 3rem;
+    }
+    .settBar{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .rangeLabel{
+        font-size: 2rem;
+        width: max-content;
+    }
+}
+@media (max-width: 690px) {
+    header{
+        font-size: 2.5rem;
+    }
+    .gridContainer{
+        width: 99%;
+    }
+    footer{
+        font-size: 1.8rem;
+    }
+}
+

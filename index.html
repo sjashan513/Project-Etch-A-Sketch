@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f732282560.js" crossorigin="anonymous"></script>
+    <script src="/Odin/E-sketxh/app.js" defer></script>
+    <link rel="stylesheet" href="/Odin/E-sketxh/style.css">
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <header>
+        <h1>Etch-A-Sketch</h1>
+    </header>
+    <main>
+        <div class="mainContainer">
+            <nav class="settBar">
+            <label for="colorBtn" class="col">
+                <button class="btn" id="color" value="#000000">Color</button>
+                <input type="color" name="colorBtn" id="colorBtn" value="#000000">
+            </label>
+            <span><button class="btn" id="rainbowBtn">Rainbow</button></span>
+            <span><button class="btn" id="eraseBtn">Erase</button></span>
+            <span><button class="btn" id="clearBtn">Clear</button></span>
+            <label for="rangeBtn" class="rangeLabel">
+                <span id="range">16 x 16</span>
+                <input type="range" name="rangeBtn" value="16" id="rangeBtn" min="1" max="64" >
+            </label>
+        </nav>
+        <div class="gridContainer" id="gridContainer" draggable="false"></div>
+    </main>
+    <footer>
+        <p>Copyright &#169; 
+            <a href="https://github.com/sjashan513/Project-Etch-A-Sketch.git" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+    </footer>
+</body>
+</html>
